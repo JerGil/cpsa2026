@@ -1,0 +1,168 @@
+---
+title: "Who Supports Transit?"
+subtitle: "Individual and City-Level Predictors of Transit Policy Attitudes in Canada"
+author: "Jérémy Gilbert"
+format: 
+    revealjs:
+        html: true
+        logo: images/logo.png
+        theme: [default, custom.scss]
+---
+
+## Canadian Public Transit Investment
+
+<div style="margin-bottom: 50px;"></div>
+
+- Canadian municipalities invest massively in public transit projects
+- The federal government funds $25 Billion over 10 years for transit projects
+- Many projects are controversial
+
+<div style="margin-bottom: 25px;"></div>
+
+- *Do Canadians support public transit investment?*
+
+## What We Know
+
+<div style="margin-bottom: 50px;"></div>
+
+- Individual predictors of [**transit policy support**]{.highlight} are:
+    - Commute mode
+    - Ideology and demographics
+- Mode-switch indicators and ridership satisfaction
+- The **Quality Paradox**: Transit quality does not translate into *satisfaction*
+
+## What We Don't Know
+
+<div style="margin-bottom: 50px;"></div>
+
+- No urban comparative research on Canadian cities
+- Is public transit **quality** associated with transit **attitudes**?
+    - Does the quality paradox about satisfaction also apply to [**policy support**]{.highlight}?
+
+## Research Questions
+
+<div style="margin-bottom: 50px;"></div>
+
+**RQ1:** How do transit and urban mobility policy attitudes vary across Canadian cities?
+
+**RQ2:** Which *individual-level* factors are associated with urban mobility attitudes in Canadian cities?
+
+**RQ3:** Is city-level [**transit quality**]{.highlight} associated with individual policy attitudes?
+
+## Data
+
+<div style="margin-bottom: 50px;"></div>
+
+- Survey data from the Canadian Municipal Barometer in winter 2025
+    - Includes Public transit support items
+        - *My municipality should invest more in public transit infrastructure in my neighbourhood, even if it means a slight increase in taxes.* (n = 4,183)
+    - Respondents linked to their **CMA** through postal code
+
+:::{.notes}
+I know this might not be the best item for a broader indicator of transit support. There are reasons why I rely on this item and not others or a scale that are related to the survey design, we can talk about this during the question period if you want. I did make a few tests and the findings are consistent across alternative dependent variables.
+:::
+
+## Transit Quality Index
+
+<div style="margin-bottom: 50px;"></div>
+
+- Data from Statistics Canada
+- GTFS files and commute time
+- [**42**]{.highlight} census areas with a population of 100,000 or more
+
+## Transit Quality Index
+
+<div style="margin-bottom: 50px;"></div>
+
+:::: {.columns}
+::: {.column width="50%"}
+<div style="border-bottom: 2px solid black; margin-bottom: 8px;"><strong>Supply</strong></div>
+
+- Route km per [**area**]{.highlight}
+- Service frequency
+- Modal weights
+:::
+::: {.column width="50%"}
+<div style="border-bottom: 2px solid black; margin-bottom: 8px;"><strong>Competitiveness</strong></div>
+
+- [**Transit**]{.highlight} commute time vs [**car**]{.highlight} commute time
+- Across five distance bands between 1 and 15 km
+:::
+::::
+
+:::{.notes}
+I like doing it per area because it accounts for suburban sprawl, which is very common in Canada
+:::
+
+## TQI rankings
+
+<div style="margin-bottom: 50px;"></div>
+
+![](images/tqi_ranking.png){fig-align="center"}
+
+## Between-city Variance
+
+![](images/tqixsupport.png){fig-align="center"}
+
+:::{.notes}
+- ANOVA and ICC (intraclass correlation coefficient) tests, city-membership only accounts for about 2 to 3% of the variance in attitudes. People are not much more alike within cities than they are across cities.
+
+- No time for all results included in the paper, can show you more later
+:::
+
+## Regression Findings
+
+![](images/coef_plot_2.png){fig-align="center"}
+
+:::{.notes}
+Provincial fixed effects and other controls
+:::
+
+## Regression Findings
+
+![](images/coef_plot_34.png){fig-align="center"}
+
+## Implications
+
+<div style="margin-bottom: 50px;"></div>
+
+- Geographical context more impactful at the *provincial* level?
+    - Transit funding is mostly a provincial responsibility
+    - Provincial and federal political cultures shape the policy environment?
+- The [**Quality Paradox**]{.highlight}
+    - Improving quality ≠ support for expansion?
+    - Quality of the system doesn't matter?
+- *Individual* factors are the best predictors
+
+::: {.notes}
+1. If city membership only explain 2-3% of variance in public transit investment support, and provincial fixed effects absorb variation, then geo context is not impactful at the city level.
+2. The quality paradox is not only related to satisfaction, but to investment support. The feedback loop between service provision and political demand may not be as impactful as anticipated by many transit supporters. 
+3. Commute mode - people who use transit are in favor of investment. Ideology is important too.
+:::
+
+## Conclusion
+
+<div style="margin-bottom: 50px;"></div>
+
+- Improving the Transit Quality Index
+    - Neighbourhood-level analysis
+    - Adding elements to an incomplete quality index
+- Existence of a virtuous cycle of transit expansion
+
+::: {.notes}
+1. There is a lot of variation inside a city, between neighbourhoods. An analysis of transit quality and support at the neighbourhood level might reveal some very interesting findings.
+2. The index leaves out many more indicators of transit quality, such as reliability and accessibility.
+3. The fact that better transit doesn't correlate with transit investment support doesn't necessarily mean that there isn't a virtuous cycle of transit expansion. Because if commute mode is a predictor of transit support, expanding the transit grid should inevitably bring more people to use it, and eventually support transit investment. I might just be more indirect than assumed.
+:::
+
+## Appendix
+
+### Alternative Dependent Variables
+
+![](images/ceof_alt.png){fig-align="center" width="500"}
+
+## Appendix
+
+### Urban Mobility Attitudes
+
+![](images/attitudes.png){fig-align="center" width="450"}

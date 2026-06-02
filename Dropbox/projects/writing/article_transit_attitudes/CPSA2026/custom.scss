@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+
+$body-bg: #fff;
+$body-color: #222;
+$link-color: #4F2683;
+$presentation-heading-color: #4F2683;
+$light-bg-text-color: #222;
+
+/*-- scss:rules --*/
+
+.highlight {
+  color: #4F2683;
+}
+
+.red {
+  color: #D80621;
+}
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal .slide-logo {
+    height: 80px !important;
+    max-width: unset !important;
+    max-height: unset !important;
+  }
