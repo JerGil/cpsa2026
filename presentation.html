@@ -326,7 +326,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Who Supports Transit?</h1>
-  <p class="subtitle">Individual and City-Level Predictors of Transit Policy Attitudes in Canada</p>
+  <p class="subtitle">Individual and Geographic Predictors of Transit Policy Attitudes in Canada</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -392,9 +392,9 @@ Jérémy Gilbert
 <div style="margin-bottom: 50px;">
 
 </div>
-<p><strong>RQ1:</strong> How do transit and urban mobility policy attitudes vary across Canadian cities?</p>
-<p><strong>RQ2:</strong> Which <em>individual-level</em> factors are associated with urban mobility attitudes in Canadian cities?</p>
-<p><strong>RQ3:</strong> Is city-level <span class="highlight"><strong>transit quality</strong></span> associated with individual policy attitudes?</p>
+<p><strong>RQ1:</strong> How do transit policy attitudes vary across Canadian cities?</p>
+<p><strong>RQ2:</strong> Which <em>individual-level</em> factors are associated with transportation policy attitudes in Canadian cities?</p>
+<p><strong>RQ3:</strong> Is <span class="highlight"><strong>transit quality</strong></span> associated with individual transit policy attitudes?</p>
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
@@ -408,16 +408,34 @@ Jérémy Gilbert
 </ul></li>
 </ul>
 <div style="border: 1px solid #ccc; border-radius: 8px; padding: 16px 20px; text-align: center; background-color: #f5f5f5; color: #222; max-width: 100%; margin: 0 auto; font-weight: 500;">
-<p><em>My municipality should invest more in public transit</em> <br> <em>infrastructure in my neighbourhood, even if it means</em> <br> <em>a slight increase in taxes. (n = 4,183)</em></p>
-</div>
-<div style="margin-bottom: 50px;">
-
+<p><em>The government should invest more in public transit</em> <br> <em>infrastructure, even if it means a slight</em> <br> <em>increase in taxes. (n = 2,322)</em></p>
 </div>
 <ul>
-<li>Respondents are matched to their <strong>CMA</strong> through postal code</li>
+<li>Respondents are matched to their <strong>CMA</strong> and <strong>census tract</strong> (<span class="new"><strong>NEW!</strong></span>) through postal code</li>
 </ul>
-<aside class="notes">
-<p>I know this might not be the best item for a broader indicator of transit support. There are reasons why I rely on this item and not others or a scale that are related to the survey design, we can talk about this during the question period if you want. I did make a few tests and the findings are consistent across alternative dependent variables.</p>
+</section>
+<section id="individual-predictors" class="slide level2">
+<h2>Individual Predictors</h2>
+
+<img data-src="images/03_coef_plot_m2_gov.png" class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Provincial fixed effects and other controls</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-coherent-direction-for-ideology-and-pid" class="slide level2">
+<h2>A Coherent Direction for Ideology and PID</h2>
+
+<img data-src="images/03_coef_ideology_partisanship.png" width="850" class="r-stretch quarto-figure-center"><aside class="notes">
+<p>Pooling across the government and municipal DV: ideology, CPC identification, and NDP identification all point the same direction for both outcomes. What changes is only whether the estimate clears conventional significance, not its sign.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -437,8 +455,9 @@ Jérémy Gilbert
 </div>
 <ul>
 <li>Data from Statistics Canada</li>
-<li>GTFS files and commute time</li>
-<li><span class="highlight"><strong>42</strong></span> census areas with a population of 100,000 or more</li>
+<li>GTFS files, commute time and spatial access measure</li>
+<li>All <span class="highlight"><strong>41</strong></span> CMAs (Population 100,000+)</li>
+<li><span class="highlight"><strong>6,052</strong></span> Census Tracts of the 41 CMAs</li>
 </ul>
 </section>
 <section id="transit-quality-index-1" class="slide level2">
@@ -447,7 +466,7 @@ Jérémy Gilbert
 
 </div>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:33%;">
 <div style="border-bottom: 2px solid black; margin-bottom: 8px;">
 <strong>Supply</strong>
 </div>
@@ -456,7 +475,7 @@ Jérémy Gilbert
 <li>Service frequency</li>
 <li>Modal weights</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:33%;">
 <div style="border-bottom: 2px solid black; margin-bottom: 8px;">
 <strong>Competitiveness</strong>
 </div>
@@ -464,10 +483,22 @@ Jérémy Gilbert
 <li><span class="highlight"><strong>Transit</strong></span> commute time vs <span class="highlight"><strong>car</strong></span> commute time</li>
 <li>Across five distance bands between 1 and 15 km</li>
 </ul>
+</div><div class="column" style="width:33%;">
+<div style="border-bottom: 2px solid black; margin-bottom: 8px;">
+<strong>Accessibility <span class="new">NEW!</span></strong>
+</div>
+<ul>
+<li>Stop <span class="highlight"><strong>density</strong></span> by CT</li>
+<li>Transit spacial access measure (<strong>SAM</strong>)</li>
+</ul>
 </div>
 </div>
 <aside class="notes">
-<p>I like doing it per area because it accounts for suburban sprawl, which is very common in Canada</p>
+<p>CT - CMA - CT</p>
+<ul>
+<li>How easy it is to get from a geographical point to a point of interest.</li>
+<li>In a neighborhood, hot easy it is to get to a transit stop, and then with this transit how easy it is to get to a point of interest.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -480,201 +511,234 @@ Jérémy Gilbert
           display:block!important;
       }</style></aside>
 </section>
-<section id="tqi-rankings" class="slide level2">
-<h2>TQI rankings</h2>
+<section id="tqi-rankings-by-cma" class="slide level2">
+<h2>TQI rankings by CMA</h2>
 <div style="margin-bottom: 30px;">
 
 </div>
 
-<table style="margin: 0 auto; border-collapse: collapse; font-size: 0.75em; width: 80%;">
+<table style="margin: 0 auto; border-collapse: collapse; font-size: 0.7em; width: 90%;">
 <thead>
 <tr>
-<th style="padding: 6px 12px; text-align: right; font-weight: 600;">
+<th style="padding: 6px 10px; text-align: right; font-weight: 600;">
 Rank
 </th>
-<th style="padding: 6px 12px; text-align: left; font-weight: 600;">
+<th style="padding: 6px 10px; text-align: left; font-weight: 600;">
 CMA
 </th>
-<th style="padding: 6px 12px; text-align: right; font-weight: 600;">
+<th style="padding: 6px 10px; text-align: right; font-weight: 600;">
 TQI
 </th>
-<th style="padding: 6px 12px; text-align: right; font-weight: 600;">
+<th style="padding: 6px 10px; text-align: right; font-weight: 600;">
 Supply
 </th>
-<th style="padding: 6px 12px; text-align: right; font-weight: 600;">
+<th style="padding: 6px 10px; text-align: right; font-weight: 600;">
+Accessibility
+</th>
+<th style="padding: 6px 10px; text-align: right; font-weight: 600;">
 Competitiveness
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
 1
 </td>
-<td style="padding: 5px 12px;">
-Vancouver
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.798
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.951
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.670
-</td>
-</tr>
-<tr>
-<td style="padding: 5px 12px; text-align: right;">
-2
-</td>
-<td style="padding: 5px 12px;">
+<td style="padding: 5px 10px;">
 Montréal
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.784
+<td style="padding: 5px 10px; text-align: right;">
+0.578
 </td>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
 1.000
 </td>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
+0.314
+</td>
+<td style="padding: 5px 10px; text-align: right;">
 0.615
 </td>
 </tr>
 <tr>
-<td style="padding: 5px 12px; text-align: right;">
-3
+<td style="padding: 5px 10px; text-align: right;">
+2
 </td>
-<td style="padding: 5px 12px;">
+<td style="padding: 5px 10px;">
 Toronto
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.748
+<td style="padding: 5px 10px; text-align: right;">
+0.548
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.927
+<td style="padding: 5px 10px; text-align: right;">
+0.925
 </td>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
+0.294
+</td>
+<td style="padding: 5px 10px; text-align: right;">
 0.603
 </td>
 </tr>
 <tr>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
+3
+</td>
+<td style="padding: 5px 10px;">
+Vancouver
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.546
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.950
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.256
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.670
+</td>
+</tr>
+<tr>
+<td style="padding: 5px 10px; text-align: right;">
 4
 </td>
-<td style="padding: 5px 12px;">
-Victoria
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.719
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.780
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.663
-</td>
-</tr>
-<tr>
-<td style="padding: 5px 12px; text-align: right;">
-5
-</td>
-<td style="padding: 5px 12px;">
-Hamilton
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.711
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.976
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.518
-</td>
-</tr>
-<tr>
-<td style="padding: 5px 12px; text-align: right;">
-6
-</td>
-<td style="padding: 5px 12px;">
-Québec
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.701
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.805
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.610
-</td>
-</tr>
-<tr>
-<td style="padding: 5px 12px; text-align: right;">
-7
-</td>
-<td style="padding: 5px 12px;">
+<td style="padding: 5px 10px;">
 Calgary
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.682
+<td style="padding: 5px 10px; text-align: right;">
+0.452
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.829
+<td style="padding: 5px 10px; text-align: right;">
+0.825
 </td>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
+0.199
+</td>
+<td style="padding: 5px 10px; text-align: right;">
 0.561
 </td>
 </tr>
 <tr>
-<td style="padding: 5px 12px; text-align: right;">
-8
+<td style="padding: 5px 10px; text-align: right;">
+5
 </td>
-<td style="padding: 5px 12px;">
-Guelph
+<td style="padding: 5px 10px;">
+Québec
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.647
+<td style="padding: 5px 10px; text-align: right;">
+0.445
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.902
+<td style="padding: 5px 10px; text-align: right;">
+0.800
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.464
+<td style="padding: 5px 10px; text-align: right;">
+0.181
 </td>
-</tr>
-<tr>
-<td style="padding: 5px 12px; text-align: right;">
-9
-</td>
-<td style="padding: 5px 12px;">
-Oshawa
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.644
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.854
-</td>
-<td style="padding: 5px 12px; text-align: right;">
-0.486
+<td style="padding: 5px 10px; text-align: right;">
+0.610
 </td>
 </tr>
 <tr>
-<td style="padding: 5px 12px; text-align: right;">
-10
+<td style="padding: 5px 10px; text-align: right;">
+6
 </td>
-<td style="padding: 5px 12px;">
+<td style="padding: 5px 10px;">
 Ottawa–Gatineau
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.634
+<td style="padding: 5px 10px; text-align: right;">
+0.430
 </td>
-<td style="padding: 5px 12px; text-align: right;">
-0.732
+<td style="padding: 5px 10px; text-align: right;">
+0.725
 </td>
-<td style="padding: 5px 12px; text-align: right;">
+<td style="padding: 5px 10px; text-align: right;">
+0.200
+</td>
+<td style="padding: 5px 10px; text-align: right;">
 0.549
+</td>
+</tr>
+<tr>
+<td style="padding: 5px 10px; text-align: right;">
+7
+</td>
+<td style="padding: 5px 10px;">
+Hamilton
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.426
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.975
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.153
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.518
+</td>
+</tr>
+<tr>
+<td style="padding: 5px 10px; text-align: right;">
+8
+</td>
+<td style="padding: 5px 10px;">
+Victoria
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.423
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.775
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.147
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.663
+</td>
+</tr>
+<tr>
+<td style="padding: 5px 10px; text-align: right;">
+9
+</td>
+<td style="padding: 5px 10px;">
+Winnipeg
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.403
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.450
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.223
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.651
+</td>
+</tr>
+<tr>
+<td style="padding: 5px 10px; text-align: right;">
+10
+</td>
+<td style="padding: 5px 10px;">
+Kitchener–Cambridge–Waterloo
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.366
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.875
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.132
+</td>
+<td style="padding: 5px 10px; text-align: right;">
+0.426
 </td>
 </tr>
 </tbody>
@@ -684,10 +748,9 @@ Ottawa–Gatineau
 <section id="across-city-variance" class="slide level2">
 <h2>Across-city Variance</h2>
 
-<img data-src="images/tqixsupport.png" class="r-stretch quarto-figure-center"><aside class="notes">
+<img data-src="images/02_support_mean_CMA.png" class="r-stretch quarto-figure-center"><aside class="notes">
 <ul>
-<li><p>ANOVA and ICC (intraclass correlation coefficient) tests, city-membership only accounts for about 2 to 3% of the variance in attitudes. People are not much more alike within cities than they are across cities.</p></li>
-<li><p>No time for all results included in the paper, can show you more later</p></li>
+<li>ANOVA and ICC (intraclass correlation coefficient) tests, city-membership only accounts for about 2 to 3% of the variance in attitudes. People are not much more alike within cities than they are across cities.</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -701,27 +764,14 @@ Ottawa–Gatineau
           display:block!important;
       }</style></aside>
 </section>
-<section id="regression-findings" class="slide level2">
-<h2>Regression Findings</h2>
+<section id="value-of-census-tract-analysis" class="slide level2">
+<h2>Value of Census Tract Analysis</h2>
 
-<img data-src="images/coef_plot_2.png" class="r-stretch quarto-figure-center"><aside class="notes">
-<p>Provincial fixed effects and other controls</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="regression-findings-1" class="slide level2">
-<h2>Regression Findings</h2>
+<img data-src="images/map_supply_big3_pres.png" class="r-stretch quarto-figure-center"></section>
+<section id="transit-quality-effect" class="slide level2">
+<h2>Transit Quality Effect?</h2>
 
-<img data-src="images/coef_plot_34.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/03_coef_plot_m34_gov.png" class="r-stretch quarto-figure-center"></section>
 <section id="implications" class="slide level2">
 <h2>Implications</h2>
 <div style="margin-bottom: 50px;">
@@ -758,57 +808,19 @@ Ottawa–Gatineau
           display:block!important;
       }</style></aside>
 </section>
-<section id="conclusion" class="slide level2">
-<h2>Conclusion</h2>
-<div style="margin-bottom: 50px;">
-
-</div>
-<ul>
-<li>Improving the Transit Quality Index
-<ul>
-<li>Neighbourhood-level analysis</li>
-<li>Adding elements to an incomplete quality index</li>
-</ul></li>
-<li>Existence of a virtuous cycle of transit expansion</li>
-</ul>
-<aside class="notes">
-<ol type="1">
-<li>There is a lot of variation inside a city, between neighbourhoods. An analysis of transit quality and support at the neighbourhood level might reveal some very interesting findings.</li>
-<li>The index leaves out many more indicators of transit quality, such as reliability and accessibility.</li>
-<li>The fact that better transit doesn’t correlate with transit investment support doesn’t necessarily mean that there isn’t a virtuous cycle of transit expansion. Because if commute mode is a predictor of transit support, expanding the transit grid should inevitably bring more people to use it, and eventually support transit investment. I might just be more indirect than assumed.</li>
-</ol>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="section" class="slide level2 center">
 <h2></h2>
 <div style="text-align: center;">
 <p style="font-size: 1.8em; font-weight: 600;">
-Jérémy Gilbert
-</p>
-<p style="font-size: 1.1em; color: #4F2683;">
-jgilbe62@uwo.com
+Thank you and take care!
 </p>
 </div>
 </section>
-<section id="alternative-dependent-variables" class="slide level2">
-<h2>Alternative Dependent Variables</h2>
-
-<img data-src="images/ceof_alt.png" width="500" class="r-stretch quarto-figure-center"></section>
 <section id="urban-mobility-attitudes" class="slide level2">
 <h2>Urban Mobility Attitudes</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/attitudes.png" width="500"></p>
+<p><img data-src="images/01_attitudes_national.png" width="800"></p>
 </figure>
 </div>
 <p><img src="images/logo.png" class="slide-logo"></p>
