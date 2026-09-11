@@ -1,0 +1,23 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# Safety: this repo is rooted at $HOME (for GitHub Pages publishing of a
+# specific presentation folder). Deny everything by default and only
+# re-allow the exact path(s) being published, so a stray `git add -A` or
+# `git add .` from the home directory can never stage the rest of $HOME.
+/*
+!/.gitignore
+!/Dropbox
+/Dropbox/*
+!/Dropbox/projects
+/Dropbox/projects/*
+!/Dropbox/projects/writing
+/Dropbox/projects/writing/*
+!/Dropbox/projects/writing/article_transit_attitudes
+/Dropbox/projects/writing/article_transit_attitudes/*
+!/Dropbox/projects/writing/article_transit_attitudes/CPSA2026
+!/Dropbox/projects/writing/article_transit_attitudes/conferences
+/Dropbox/projects/writing/article_transit_attitudes/conferences/*
+!/Dropbox/projects/writing/article_transit_attitudes/conferences/pub_workshop
